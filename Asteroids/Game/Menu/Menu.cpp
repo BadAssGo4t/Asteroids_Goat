@@ -1,7 +1,12 @@
 #include "Menu.h"
-using namespace ScreenManager;
+#include "Screen_Manager.h"
 
-// Resolucion Standar de ventana 1024 x 768
+namespace ScreenManager
+{
+	extern 	ScreenConfig currentScreenConfig;
+}
+
+using namespace ScreenManager;
 
 namespace Menu
 {
@@ -10,6 +15,8 @@ namespace Menu
 	static Image background;
 	static Texture2D backgroundTex;
 	static Vector2 mousePoint;
+
+
 
 	void InitMenu()
 	{
@@ -40,12 +47,14 @@ namespace Menu
 
 		mousePoint = GetMousePosition();
 
+
+
 		if (CheckCollisionPointRec(mousePoint, playBttn.Bounds)) //Checks state of the DEV BTTN
 		{
-			if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))playBttn.changeColor({ 255, 203, 0, 255 });
+			if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) { playBttn.changeColor({ 255, 203, 0, 255 }); }
 			else playBttn.changeColor({ 200, 200, 200, 255 });
 
-			if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) {}playBttn.Action = true;
+			if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) { playBttn.Action = true; }
 		}
 		else playBttn.changeColor({ 80, 80, 80, 255 });
 

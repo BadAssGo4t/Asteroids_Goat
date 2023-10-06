@@ -18,8 +18,7 @@ namespace ScreenManager
 		float height;
 		const char* name;
 	};
-
-	static ScreenConfig currentScreenConfig;
+	
 	enum GameScreens
 	{
 		MenuScreen = 0,
@@ -32,5 +31,5 @@ namespace ScreenManager
 
 
     int ScreenManager();
-	void SetMenuWindow(ScreenConfig currentScreenConfig);
+	void SetMenuWindow();
 }

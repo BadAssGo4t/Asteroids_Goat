@@ -1,12 +1,23 @@
 #include "Game.h"
+#include "Screen_Manager.h"
+
+
+namespace ScreenManager
+{
+    extern 	ScreenConfig currentScreenConfig;
+}
+
+using namespace ScreenManager;
+
 
 namespace Game
 {
 
+
     void InitGame() // Init
     {
-        ScreenManager::currentScreenConfig.name = "Asteroids - Game";
-        SetWindowTitle(ScreenManager::currentScreenConfig.name);
+        currentScreenConfig.name = "Asteroids - Game";
+        SetWindowTitle(currentScreenConfig.name);
     }
 
     void UpdateGame()

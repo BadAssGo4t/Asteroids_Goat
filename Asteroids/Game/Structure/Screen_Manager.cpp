@@ -2,6 +2,7 @@
 
 namespace ScreenManager
 {
+	ScreenConfig currentScreenConfig;
 
 	static void Change();
 
@@ -40,7 +41,7 @@ namespace ScreenManager
 		}
 	}
 
-	void SetMenuWindow(ScreenConfig currentScreenConfig)
+	void SetWindow()
 	{
 		SetWindowSize(static_cast<int>(currentScreenConfig.width), static_cast<int>(currentScreenConfig.height));
 		SetWindowTitle(currentScreenConfig.name);

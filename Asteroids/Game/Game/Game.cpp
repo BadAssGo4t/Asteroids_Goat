@@ -5,8 +5,8 @@ namespace Game
 
     void InitGame() // Init
     {
-        currentScreenConfig.name = "Asteroids - Game";
-        SetWindowTitle(currentScreenConfig.name);
+        ScreenManager::currentScreenConfig.name = "Asteroids - Game";
+        SetWindowTitle(ScreenManager::currentScreenConfig.name);
     }
 
     void UpdateGame()

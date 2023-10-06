@@ -27,16 +27,17 @@ namespace ScreenManager
 
 	static void Change()
 	{
-
 		switch (Screens)
 		{
 
-		case Menu: {
+		case MenuScreen: {
 			Menu::UpdateMenu();
+		} break;
+		case GameScreen: {
+			Game::UpdateGame();
 		} break;
 
 		}
-
 	}
 
 	void SetMenuWindow(ScreenConfig currentScreenConfig)

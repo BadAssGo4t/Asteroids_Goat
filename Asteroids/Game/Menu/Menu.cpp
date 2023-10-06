@@ -1,4 +1,5 @@
 #include "Menu.h"
+using namespace ScreenManager;
 
 // Resolucion Standar de ventana 1024 x 768
 
@@ -8,6 +9,7 @@ namespace Menu
 
 	static Image background;
 	static Texture2D backgroundTex;
+	static Vector2 mousePoint;
 
 	void InitMenu()
 	{
@@ -52,7 +54,7 @@ namespace Menu
 			std::cout << "action";
 			playBttn.Action = false;
 			Game::InitGame();
-			ScreenManager::Screens = ScreenManager::Game;
+			Screens = GameScreen;
 		}
 	}
 

@@ -9,24 +9,23 @@
 
 #include "Button.h"
 
-static Vector2 mousePoint;
-
-struct   ScreenConfig
-{
-    float width;
-    float height;
-    const char* name;
-};
-static ScreenConfig currentScreenConfig;
 
 namespace ScreenManager
 {
+	struct   ScreenConfig
+	{
+		float width;
+		float height;
+		const char* name;
+	};
+
+	static ScreenConfig currentScreenConfig;
 	enum GameScreens
 	{
-		Menu = 0,
-		Game,
-		Instructions,
-		Credits,
+		MenuScreen = 0,
+		GameScreen,
+		InstructionsScreen,
+		CreditsScreen,
 		End
 	};
 	extern GameScreens Screens;

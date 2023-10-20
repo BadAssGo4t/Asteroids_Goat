@@ -1,0 +1,9 @@
+git log  -> muestra todo lo commiteado // gitK
+
+
+git tag ( tag number) actual one
+
+but if i git tag (tag number)  (commit ID) 
+
+
+
